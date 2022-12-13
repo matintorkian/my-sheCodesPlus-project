@@ -1,0 +1,30 @@
+body {
+  margin-top: 50px;
+}
+.weather-emojies {
+  display: block;
+  font-size: 5em;
+}
+.temperature {
+  font-size: 3em;
+}
+hr {
+  color: blueviolet;
+  border: 1px solid;
+}
+.wind-speed {
+  margin-top: 40px;
+  font-size: larger;
+  font-family: "Sniglet", cursive;
+}
+
+.main-temp {
+  font-size: 2em;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.units {
+  font-size: 0.5;
+}
