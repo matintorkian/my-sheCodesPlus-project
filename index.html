@@ -12,77 +12,106 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Handlee&family=Righteous&family=Sniglet&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="row">
+      <div class="overall-body">
         <div class="col">
-          <form id="search">
-            <input type="text" placeholder="choose a city" id="chosen-city" />
-            <button type="submit" class="btn btn-primary">search</button>
+          <form class="form-design" id="search">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  placeholder="choose a city"
+                  id="chosen-city"
+                />
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary">search</button>
+              </div>
+            </div>
           </form>
 
           <br />
           <div class="row">
-            <div class="col">
-              <h1 id="heading">Isfahan</h1>
+            <div class="col-6">
+              <h1 class="heading" id="heading">Isfahan</h1>
+              <ul>
+                <li>
+                  <span id="time"></span>
+                </li>
+                <li>clear</li>
+              </ul>
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    class="main-img"
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="partly_cloudy"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <span class="main-temp" id="main-temp"
+                    >12 <span class="units"> °C |°F</span></span
+                  >
+                </div>
+              </div>
             </div>
-            <div class="col">
-              <span class="main-temp" id="main-temp"
-                >12 <span class="units"> °C </span></span
-              >
+            <div class="col-6">
+              <ul>
+                <li>
+                  <span id="wind-speed">wind 4 km/h</span>
+                </li>
+                <li>Humidity</li>
+              </ul>
             </div>
           </div>
-          <p id="time"></p>
-          <br />
-          <div class="weather-emojies">⛈</div>
         </div>
-        <div class="col">
-          <div class="wind-speed" id="wind-speed">wind 4 km/h</div>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col">
-          <div class="temperature">12°C</div>
-          <br />
-          <div class="weather-emojies">⛈</div>
-        </div>
-        <div class="col">
-          <div class="temperature">14°C</div>
-          <br />
-          <div class="weather-emojies">⛈</div>
-        </div>
-        <div class="col">
-          <div class="temperature">16°C</div>
-          <br />
-          <div class="weather-emojies">🌦</div>
-        </div>
-        <div class="col">
-          <div class="temperature">15°C</div>
-          <br />
-          <div class="weather-emojies">🌥</div>
-        </div>
-        <div class="col">
-          <div class="temperature">15°C</div>
-          <br />
-          <div class="weather-emojies">🌤</div>
+        <div class="col"></div>
+        <hr />
+        <div class="row">
+          <div class="col">
+            <div class="temperature">12°C</div>
+            <br />
+            <div class="weather-emojies">⛈</div>
+          </div>
+          <div class="col">
+            <div class="temperature">14°C</div>
+            <br />
+            <div class="weather-emojies">⛈</div>
+          </div>
+          <div class="col">
+            <div class="temperature">16°C</div>
+            <br />
+            <div class="weather-emojies">🌦</div>
+          </div>
+          <div class="col">
+            <div class="temperature">15°C</div>
+            <br />
+            <div class="weather-emojies">🌥</div>
+          </div>
+          <div class="col">
+            <div class="temperature">15°C</div>
+            <br />
+            <div class="weather-emojies">🌤</div>
+          </div>
         </div>
       </div>
+      <small class="credit"
+        >Created by
+        <a href="https://github.com/matintorkian/my-sheCodesPlus-project"
+          >Matin Torkian</a
+        ></small
+      >
     </div>
-    <span class="credit"
-      >Created by
-      <a href="https://github.com/matintorkian/my-sheCodesPlus-project"
-        >Matin Torkian</a
-      ></span
-    >
+
     <script src="src/code.js"></script>
   </body>
 </html>
