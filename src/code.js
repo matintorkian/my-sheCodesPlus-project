@@ -1,4 +1,5 @@
 function showWeatherData(response) {
+  console.log(response.data);
   //get the temperature
   let temperature = response.data.main.temp;
   let mainTemp = document.querySelector("#main-temp");
@@ -7,6 +8,12 @@ function showWeatherData(response) {
   let windSpeed = response.data.wind.speed;
   let windSpeedDisplay = document.querySelector("#wind-speed");
   windSpeedDisplay.innerHTML = `wind speed ${windSpeed} Km/h`;
+  //get the humidity
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  //get the weather description
+  let weatherDescription = document.querySelector("#description");
+  weatherDescription.innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(event) {
