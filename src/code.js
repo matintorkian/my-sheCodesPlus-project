@@ -1,5 +1,4 @@
 function showWeatherData(response) {
-  console.log(response.data);
   //get the temperature
   let temperature = response.data.main.temp;
   let mainTemp = document.querySelector("#main-temp");
@@ -14,6 +13,12 @@ function showWeatherData(response) {
   //get the weather description
   let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = response.data.weather[0].description;
+  // get the city weather icon
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(event) {
