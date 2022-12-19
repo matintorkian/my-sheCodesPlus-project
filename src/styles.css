@@ -26,16 +26,25 @@ hr {
 }
 
 .main-temp {
-  font-size: 2em;
-  display: block;
-  margin-left: 10px;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .units {
-  font-size: 0.5;
   position: relative;
-  font-size: 16px;
-  top: -20px;
+  font-size: 18px;
+  top: -34px;
+}
+
+.units .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
 }
 
 .credit {
@@ -51,7 +60,7 @@ hr {
 .overall-body {
   border: 1px solid #dadde1;
   border-radius: 5px;
-  max-width: 600px;
+  max-width: 500px;
   margin: 30px auto;
 }
 
@@ -64,4 +73,9 @@ hr {
   margin-left: 20px;
   margin-top: 0;
   padding: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,8 +1,9 @@
 function showWeatherData(response) {
+  celciusTemperature = response.data.main.temp;
   //get the temperature
   let temperature = response.data.main.temp;
   let mainTemp = document.querySelector("#main-temp");
-  mainTemp.innerHTML = `${Math.round(temperature)}°C`;
+  mainTemp.innerHTML = `${Math.round(temperature)}`;
   //gete the wind speed
   let windSpeed = response.data.wind.speed;
   let windSpeedDisplay = document.querySelector("#wind-speed");
@@ -30,6 +31,19 @@ function searchCity(event) {
   let apiKey = "1b9ef7be7e74fcaebc7534ce817e716c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${chosenCity.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeatherData);
+}
+
+function toFarenheit(event) {
+  event.preventDefault();
+  let mainTemp = document.querySelector("#main-temp");
+  mainTemp.innerHTML = Math.round(celciusTemperature);
+}
+
+function toCelcius(event) {
+  event.preventDefault();
+  let convertedToFarenheit = celciusTemperature * 9.5 + 32;
+  let mainTemp = document.querySelector("#main-temp");
+  mainTemp.innerHTML = Math.round(convertedToFarenheit);
 }
 
 // Displaying the real time and date on the screen
@@ -60,3 +74,11 @@ timePhrase.innerHTML = `${day} ${month} ${currentTime.getDate()} ${currentTime.g
 
 let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", searchCity);
+
+let celciusTemperature = null;
+
+let farenheitTemperatureElement = document.querySelector("#celcius-link");
+farenheitTemperatureElement.addEventListener("click", toFarenheit);
+
+let celciusTemperatureElement = document.querySelector("#farenheit-link");
+celciusTemperatureElement.addEventListener("click", toCelcius);
