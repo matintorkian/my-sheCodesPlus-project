@@ -10,9 +10,12 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
 .heading {
   margin-left: 10px;
+  text-transform: capitalize;
 }
+
 .weather-emojies {
   display: block;
   font-size: 5em;
@@ -41,9 +44,12 @@ hr {
 .units .active {
   color: rgb(33, 33, 33);
   cursor: default;
+  text-decoration: none;
 }
 
 .units .active:hover {
+  cursor: default;
+  color: rgb(33, 33, 33);
   text-decoration: none;
 }
 

@@ -37,6 +37,8 @@ function toFarenheit(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temp");
   mainTemp.innerHTML = Math.round(celciusTemperature);
+  farenheitTemperatureElement.classList.add("active");
+  celciusTemperatureElement.classList.remove("active");
 }
 
 function toCelcius(event) {
@@ -44,6 +46,8 @@ function toCelcius(event) {
   let convertedToFarenheit = celciusTemperature * 9.5 + 32;
   let mainTemp = document.querySelector("#main-temp");
   mainTemp.innerHTML = Math.round(convertedToFarenheit);
+  farenheitTemperatureElement.classList.remove("active");
+  celciusTemperatureElement.classList.add("active");
 }
 
 // Displaying the real time and date on the screen
