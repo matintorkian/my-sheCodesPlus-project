@@ -22,100 +22,103 @@
   </head>
   <body>
     <div class="container">
-      <div class="overall-body">
-        <div class="col">
-          <form class="form-design" id="search">
+      <div class="weather-app-wrapper">
+        <div class="overall-body">
+          <div class="col">
+            <form class="form-design" id="search">
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    placeholder="choose a city..."
+                    class="form-control"
+                    id="chosen-city"
+                  />
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn btn-primary">search</button>
+                </div>
+              </div>
+            </form>
+
+            <br />
+
+            <h1 class="heading" id="heading">Isfahan</h1>
             <div class="row">
-              <div class="col">
-                <input
-                  type="text"
-                  placeholder="choose a city..."
-                  class="form-control"
-                  id="chosen-city"
-                />
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <span id="time"></span>
+                  </li>
+                  <li id="description"></li>
+                </ul>
               </div>
-              <div class="col">
-                <button type="submit" class="btn btn-primary">search</button>
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <span id="wind-speed">wind 4 km/h</span>
+                  </li>
+                  <li>Humidity <span id="humidity"></span>%</li>
+                </ul>
               </div>
             </div>
-          </form>
 
-          <br />
-
-          <h1 class="heading" id="heading">Isfahan</h1>
+            <div class="box">
+              <img
+                class="main-img"
+                class="float-left"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                id="weather-icon"
+                alt="weather-icon"
+              />
+              <div>
+                <strong class="main-temp float-left" id="main-temp">12 </strong
+                ><span class="units">
+                  <a href="#" id="celcius-link"> °C</a> |
+                  <a href="#" id="farenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+            <!-- is ok -->
+          </div>
+          <div class="col"></div>
+          <hr />
           <div class="row">
-            <div class="col-6">
-              <ul>
-                <li>
-                  <span id="time"></span>
-                </li>
-                <li id="description"></li>
-              </ul>
+            <div class="col">
+              <div class="temperature">12°C</div>
+              <br />
+              <div class="weather-emojies">⛈</div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>
-                  <span id="wind-speed">wind 4 km/h</span>
-                </li>
-                <li>Humidity <span id="humidity"></span>%</li>
-              </ul>
+            <div class="col">
+              <div class="temperature">14°C</div>
+              <br />
+              <div class="weather-emojies">⛈</div>
+            </div>
+            <div class="col">
+              <div class="temperature">16°C</div>
+              <br />
+              <div class="weather-emojies">🌦</div>
+            </div>
+            <div class="col">
+              <div class="temperature">15°C</div>
+              <br />
+              <div class="weather-emojies">🌥</div>
+            </div>
+            <div class="col">
+              <div class="temperature">15°C</div>
+              <br />
+              <div class="weather-emojies">🌤</div>
             </div>
           </div>
+        </div>
 
-          <div class="box">
-            <img
-              class="main-img"
-              class="float-left"
-              src="http://openweathermap.org/img/wn/10d@2x.png"
-              id="weather-icon"
-              alt="weather-icon"
-            />
-            <div>
-              <strong class="main-temp float-left" id="main-temp">12 </strong
-              ><span class="units">
-                <a href="#" id="celcius-link"> °C</a> |
-                <a href="#" id="farenheit-link">°F</a>
-              </span>
-            </div>
-          </div>
-          <!-- is ok -->
-        </div>
-        <div class="col"></div>
-        <hr />
-        <div class="row">
-          <div class="col">
-            <div class="temperature">12°C</div>
-            <br />
-            <div class="weather-emojies">⛈</div>
-          </div>
-          <div class="col">
-            <div class="temperature">14°C</div>
-            <br />
-            <div class="weather-emojies">⛈</div>
-          </div>
-          <div class="col">
-            <div class="temperature">16°C</div>
-            <br />
-            <div class="weather-emojies">🌦</div>
-          </div>
-          <div class="col">
-            <div class="temperature">15°C</div>
-            <br />
-            <div class="weather-emojies">🌥</div>
-          </div>
-          <div class="col">
-            <div class="temperature">15°C</div>
-            <br />
-            <div class="weather-emojies">🌤</div>
-          </div>
-        </div>
+        <small class="credit"
+          >Created by
+          <a href="https://github.com/matintorkian/my-sheCodesPlus-project"
+            >Matin Torkian</a
+          ></small
+        >
       </div>
-      <small class="credit"
-        >Created by
-        <a href="https://github.com/matintorkian/my-sheCodesPlus-project"
-          >Matin Torkian</a
-        ></small
-      >
     </div>
 
     <script src="src/code.js"></script>
