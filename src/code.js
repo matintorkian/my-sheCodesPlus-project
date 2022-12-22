@@ -48,7 +48,6 @@ function getForecast(coordinates) {
 }
 
 function showWeatherData(response) {
-  celciusTemperature = response.data.main.temp;
   //get the temperature
   let temperature = response.data.main.temp;
   let mainTemp = document.querySelector("#main-temp");
@@ -83,23 +82,6 @@ function searchCity(event) {
   axios.get(apiUrl).then(showWeatherData);
 }
 
-function toFarenheit(event) {
-  event.preventDefault();
-  let mainTemp = document.querySelector("#main-temp");
-  mainTemp.innerHTML = Math.round(celciusTemperature);
-  farenheitTemperatureElement.classList.add("active");
-  celciusTemperatureElement.classList.remove("active");
-}
-
-function toCelcius(event) {
-  event.preventDefault();
-  let convertedToFarenheit = celciusTemperature * 9.5 + 32;
-  let mainTemp = document.querySelector("#main-temp");
-  mainTemp.innerHTML = Math.round(convertedToFarenheit);
-  farenheitTemperatureElement.classList.remove("active");
-  celciusTemperatureElement.classList.add("active");
-}
-
 // Displaying the real time and date on the screen
 let currentTime = new Date();
 
@@ -128,13 +110,5 @@ timePhrase.innerHTML = `${day} ${month} ${currentTime.getDate()} ${currentTime.g
 
 let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", searchCity);
-
-let celciusTemperature = null;
-
-let farenheitTemperatureElement = document.querySelector("#celcius-link");
-farenheitTemperatureElement.addEventListener("click", toFarenheit);
-
-let celciusTemperatureElement = document.querySelector("#farenheit-link");
-celciusTemperatureElement.addEventListener("click", toCelcius);
 
 displayForecast();
