@@ -73,44 +73,33 @@
                 id="weather-icon"
                 alt="weather-icon"
               />
-              <div>
+              <div class="float-left">
                 <strong class="main-temp float-left" id="main-temp">12 </strong
-                ><span class="units">
-                  <a href="#" id="celcius-link"> °C</a> |
+                ><span class="units"
+                  ><a href="#" id="celcius-link">°C</a> |
                   <a href="#" id="farenheit-link">°F</a>
                 </span>
               </div>
             </div>
             <!-- is ok -->
-          </div>
-          <div class="col"></div>
-          <hr />
-          <div class="row">
-            <div class="col">
-              <div class="temperature">12°C</div>
-              <br />
-              <div class="weather-emojies">⛈</div>
+            <!-- now the forecast -->
+            <div class="weather-forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div class="weather-forecast-date">Thu</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/50d@2x.png"
+                    alt="#"
+                    width="42"
+                  />
+                  <div class="weather-forecast-temp">
+                    <span class="weather-forecast-temp-min">12°</span>
+                    <span class="weather-forecast-temp-max">18°</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col">
-              <div class="temperature">14°C</div>
-              <br />
-              <div class="weather-emojies">⛈</div>
-            </div>
-            <div class="col">
-              <div class="temperature">16°C</div>
-              <br />
-              <div class="weather-emojies">🌦</div>
-            </div>
-            <div class="col">
-              <div class="temperature">15°C</div>
-              <br />
-              <div class="weather-emojies">🌥</div>
-            </div>
-            <div class="col">
-              <div class="temperature">15°C</div>
-              <br />
-              <div class="weather-emojies">🌤</div>
-            </div>
+            <!-- the new section end -->
           </div>
         </div>
 
