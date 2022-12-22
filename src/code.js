@@ -8,10 +8,11 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHtml = `<div class ="row">`;
-  forecast.forEach(function (forecastDay) {
-    forecastHtml =
-      forecastHtml +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `
                 <div class="col-2">
                   <div class="weather-forecast-date">${formatDay(
                     forecastDay.dt
@@ -24,15 +25,16 @@ function displayForecast(response) {
                     width="42"
                   />
                   <div class="weather-forecast-temp">
-                    <span class="weather-forecast-temp-min">${
+                    <span class="weather-forecast-temp-min">${Math.round(
                       forecastDay.temp.min
-                    }°</span>
-                    <span class="weather-forecast-temp-max">${
+                    )}°</span>
+                    <span class="weather-forecast-temp-max">${Math.round(
                       forecastDay.temp.max
-                    }°</span>
+                    )}°</span>
                   </div>
                 </div>
              `;
+    }
   });
 
   forecastHtml = `${forecastHtml}` + `</div>`;
@@ -101,7 +103,7 @@ function toCelcius(event) {
 // Displaying the real time and date on the screen
 let currentTime = new Date();
 
-let weekDays = ["Sun", "Mon", "Tue", "Wsd", "Thu", "Fri", "Sat"];
+let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = weekDays[currentTime.getDay()];
 
 let monthList = [
